@@ -1,4 +1,4 @@
-package com.generation.controller;
+package com.generation.lojagames.controller;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.generation.model.Produto;
-import com.generation.repository.CategoriaRepository;
-import com.generation.repository.ProdutoRepository;
+import com.generation.lojagames.model.Produto;
+import com.generation.lojagames.repository.CategoriaRepository;
+import com.generation.lojagames.repository.ProdutoRepository;
 
 @RestController
 @RequestMapping("/produtos")
@@ -88,5 +88,4 @@ public class ProdutoController {
 	public ResponseEntity<List<Produto>> getPrecoMenorQue(@PathVariable BigDecimal preco) {
 		return ResponseEntity.ok(produtoRepository.findByPrecoLessThanOrderByPrecoDesc(preco));
 	}
-
 }

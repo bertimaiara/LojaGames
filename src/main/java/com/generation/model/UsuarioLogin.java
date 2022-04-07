@@ -1,23 +1,23 @@
-package com.generation.model;
+package com.generation.lojagames.model;
 
 import java.time.LocalDate;
 
 public class UsuarioLogin {
 
 	private Long id;
-
+	
 	private String nome;
-
+	
 	private String usuario;
-
+	
 	private String senha;
 
 	private String foto;
 
 	private LocalDate dataNascimento;
-
+	
 	private String token;
-
+	
 	public long getId() {
 		return id;
 	}
@@ -65,12 +65,12 @@ public class UsuarioLogin {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
+	
 	public String getToken() {
 		return token;
 	}
 
 	public void setToken(String token) {
 		this.token = token;
-	}
+	}	
 }

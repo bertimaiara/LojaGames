@@ -1,4 +1,4 @@
-package com.generation.model;
+package com.generation.lojagames.model;
 
 import java.util.List;
 
@@ -17,15 +17,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "tb_categorias")
 public class Categoria {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	
 	@NotNull(message = "Tipo é obrigatório!")
 	@Size(min = 5)
 	private String tipo;
-
+	
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
@@ -52,5 +52,5 @@ public class Categoria {
 
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
-	}
+	}	
 }

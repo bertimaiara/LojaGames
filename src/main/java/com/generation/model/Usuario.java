@@ -1,4 +1,4 @@
-package com.generation.model;
+package com.generation.lojagames.model;
 
 import java.time.LocalDate;
 
@@ -33,7 +33,7 @@ public class Usuario {
 	@NotBlank(message = "O atributo Senha é Obrigatório!")
 	@Size(min = 8, message = "A Senha deve ter no mínimo 8 caracteres")
 	private String senha;
-
+	
 	private String foto;
 
 	@Column(name = "data_nascimento")
@@ -87,5 +87,5 @@ public class Usuario {
 
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
-	}
+	}	
 }
